@@ -147,6 +147,19 @@
     return self;
 }
 
+-(void)awakeFromNib {
+		_font = [UIFont systemFontOfSize:15];
+		_textColor = [UIColor blackColor];
+		_text = @"";
+		_textAlignment = RTTextAlignmentLeft;
+		_lineBreakMode = RTTextLineBreakModeWordWrapping;
+		_lineSpacing = 3;
+		_currentSelectedButtonComponentIndex = -1;
+        _paragraphReplacement = @"\n";
+		
+		[self setMultipleTouchEnabled:YES];
+}
+
 - (void)setTextAlignment:(RTTextAlignment)textAlignment
 {
 	_textAlignment = textAlignment;
